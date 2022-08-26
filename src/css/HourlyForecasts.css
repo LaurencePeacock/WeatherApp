@@ -21,3 +21,6 @@
 .hour-forecast-temp, .hour-forecast-wind{
     font-size: 1.3em;
 }
+.mph{
+    font-size: 0.7em;
+}
