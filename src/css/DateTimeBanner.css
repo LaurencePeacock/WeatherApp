@@ -1,0 +1,7 @@
+.dateTimeBanner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 7vh;
+    padding: 0em 1em;
+}
