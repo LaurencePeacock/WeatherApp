@@ -10,6 +10,7 @@ import Forecasts from './Components/Forecasts';
 import LocationHeader from './Components/LocationHeader';
 import dayjs from 'dayjs';
 import localizedFormat from 'dayjs/plugin/localizedFormat';
+import { config } from './config';
 
 function App() {
   
@@ -17,7 +18,7 @@ function App() {
 
   useEffect(() => {
       const fetchWeather = async () => {
-          axios.get('https://api.openweathermap.org/data/3.0/onecall?lat=53.91&lon=-1.74&appid=4f08418989d24274507c268329ba1973')
+          axios.get(`https://api.openweathermap.org/data/3.0/onecall?lat=53.91&lon=-1.74&appid=${config.key}`)
           .then((res) => setWeather({...weather, 
             temp: Math.round((res.data.current.temp - 273.15)).toString(), 
             feels_like: Math.round((res.data.current.feels_like - 273.15)).toString(), 
@@ -37,7 +38,7 @@ function App() {
   const [forecasts, setForecasts] = useState(null);
 
   useEffect(() => {
-    axios.get('https://api.openweathermap.org/data/3.0/onecall?lat=53.91&lon=-1.74&appid=4f08418989d24274507c268329ba1973')
+    axios.get(`https://api.openweathermap.org/data/3.0/onecall?lat=53.91&lon=-1.74&appid=${config.key}`)
           .then((res) => {setForecasts({...forecasts,
             nextHour: res.data.hourly[1],
             twoHours: res.data.hourly[2],
