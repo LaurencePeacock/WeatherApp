@@ -20,10 +20,3 @@ function CurrentWeather({ weather }) {
 
 export default CurrentWeather
 
-/*
-{
-                Object.values(weather).map((item) => {
-                    return <li>{item}</li>
-                })
-            } 
-*/

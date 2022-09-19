@@ -8,15 +8,7 @@ function HourlyForecasts( {hourForecast, currentHour, currentMinute} ) {
      const date = new Date(hourForecast.dt*1000)  
      console.log(hourForecast.weather[0].icon); 
     return (
-        
-        // <ul className="forecast">
-        //     <li>Temp: {hourForecast.feels_like}</li>
-        //     <li>Clouds: {hourForecast.clouds}</li>
-        //     <li>Wind Speed: {hourForecast.wind_speed}</li>
-        //     <li>Description: {hourForecast.weather[0].description}</li>
-        //     <li>id: {hourForecast.weather[0].id}</li>
-        // </ul>
-
+    
         <div className='hourly-forecast'>
             
             <div className='forecast-time'><b>{date.getHours()}</b>:00</div>

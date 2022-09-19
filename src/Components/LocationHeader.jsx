@@ -5,7 +5,7 @@ import drizzle from '../css/images/LightRain.jpg';
 import rain from '../css/images/HeavyRain2.jpg';
 import snow from '../css/images/LightSnow.jpg';
 import mist from '../css/images/Misty2.jpg';
- import ClearBlueSky from '../css/images/ClearBlueSky.jpg';
+import ClearBlueSky from '../css/images/ClearBlueSky.jpg';
 
 function LocationHeader({ weather }) {
     
