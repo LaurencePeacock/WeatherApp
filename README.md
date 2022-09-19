@@ -4,4 +4,3 @@ It is live for mobile here: https://laurencepeacock.github.io/WeatherApp/
 
 JS libraries used: Axios & Day.js
 
-Weather icons from: https://github.com/erikflowers/weather-icons
