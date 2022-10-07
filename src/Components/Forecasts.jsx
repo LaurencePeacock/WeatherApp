@@ -5,23 +5,16 @@ import HourlyForecasts from './HourlyForecasts';
 
 function Forecasts( {forecasts, currentHour, currentMinute }) {
     
- const forecastsArray = Object.entries(forecasts);
+    const forecastsArray = Object.entries(forecasts);
 
- const scroll = useRef(null);
+    const scroll = useRef(null);
 
- function slideBack (){
-            const forecastWidth = parseInt(
-                getComputedStyle(scroll.current.children[0]).width
-            )
-            console.log(forecastWidth);
-            scroll.current.scrollLeft -= 260;
-        }
- function slideForward (){
-            const forecastWidth = parseInt(
-                getComputedStyle(scroll.current.children[0]).width
-            )
-            scroll.current.scrollLeft += 260;
-        }
+    function slideBack (){
+                    scroll.current.scrollLeft -= 260;
+            }
+    function slideForward (){
+                    scroll.current.scrollLeft += 260;
+            }
 
     if(forecasts){
         return (

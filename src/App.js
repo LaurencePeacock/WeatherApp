@@ -1,16 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
-import './css/weather-icons-wind.css';
-import './css/weather-icons.css';
-import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { config } from './config';
+import dayjs from 'dayjs';
+import localizedFormat from 'dayjs/plugin/localizedFormat';
+import axios from 'axios';
 import DateTimeBanner from './Components/DateTimeBanner';
 import CurrentWeather from './Components/CurrentWeather';
 import Forecasts from './Components/Forecasts';
 import LocationHeader from './Components/LocationHeader';
-import dayjs from 'dayjs';
-import localizedFormat from 'dayjs/plugin/localizedFormat';
-import { config } from './config';
+import './css/weather-icons-wind.css';
+import './css/weather-icons.css';
 
 function App() {
   
@@ -73,14 +71,12 @@ function App() {
         return () => clearInterval(interval);
       }, []);
   
-  
   return (
     <div>
-      
-    {  currentDay && currentHour && currentMinute && <DateTimeBanner currentDay={currentDay} currentHour={currentHour} currentMinute={currentMinute}/>}
-    { weather && <LocationHeader weather={weather}/>}
-    { weather && <CurrentWeather weather={weather}/>}
-    { forecasts && <Forecasts forecasts={forecasts} currentHour={currentHour} currentMinute={currentMinute}/>}
+        {  currentDay && currentHour && currentMinute && <DateTimeBanner currentDay={currentDay} currentHour={currentHour} currentMinute={currentMinute}/>}
+        { weather && <LocationHeader weather={weather}/>}
+        { weather && <CurrentWeather weather={weather}/>}
+        { forecasts && <Forecasts forecasts={forecasts} currentHour={currentHour} currentMinute={currentMinute}/>}
     </div>
   );
 }
