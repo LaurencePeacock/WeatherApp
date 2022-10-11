@@ -3,9 +3,7 @@ import '../css/Forecasts.css'
 import '../css/HourlyForecasts.css'
 import HourlyForecasts from './HourlyForecasts';
 
-function Forecasts( {forecasts, currentHour, currentMinute }) {
-    
-    const forecastsArray = Object.entries(forecasts);
+function Forecasts( {forecasts} ) {
 
     const scroll = useRef(null);
 
@@ -27,8 +25,8 @@ function Forecasts( {forecasts, currentHour, currentMinute }) {
                 </button>
                 <div className='forecast-wrapper' ref={scroll}>
                     {
-                        forecastsArray.map((item) => {
-                            return  <HourlyForecasts hourForecast={item[1]} currentHour={currentHour} currentMinute={currentMinute}/>
+                        forecasts.hourly.map((item, index) => {
+                            return  <HourlyForecasts hourForecast={item} forecastIndex={index}/>
                         })
                     }
                 </div>

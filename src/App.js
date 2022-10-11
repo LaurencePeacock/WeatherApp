@@ -12,47 +12,17 @@ import './css/weather-icons.css';
 
 function App() {
   
-  const [weather, setWeather] = useState(null);
-
+  const [openWeatherData, setOpenWeatherData] = useState();
   useEffect(() => {
-      const fetchWeather = async () => {
-          axios.get(`https://api.openweathermap.org/data/3.0/onecall?lat=53.91&lon=-1.74&appid=${config.key}`)
-          .then((res) => setWeather({...weather, 
-            temp: Math.round((res.data.current.temp - 273.15)).toString(), 
-            feels_like: Math.round((res.data.current.feels_like - 273.15)).toString(), 
-            wind_speed: Math.round((res.data.current.wind_speed*2.237)),
-            sunrise: res.data.current.sunrise,
-            sunset: res.data.current.sunset,
-            id: res.data.current.weather[0].id,
-            main: res.data.current.weather[0].main,
-            description: res.data.current.weather[0].description,
-            icon: res.data.current.weather[0].icon,
-          }))
-          .catch((err) => console.log(err));
-      };
-      fetchWeather();
-  }, [])
-  
-  const [forecasts, setForecasts] = useState(null);
-
-  useEffect(() => {
-    axios.get(`https://api.openweathermap.org/data/3.0/onecall?lat=53.91&lon=-1.74&appid=${config.key}`)
-          .then((res) => {setForecasts({...forecasts,
-            nextHour: res.data.hourly[1],
-            twoHours: res.data.hourly[2],
-            threeHours: res.data.hourly[3],
-            fourHours: res.data.hourly[4],
-            fiveHours: res.data.hourly[5],
-            sixHours: res.data.hourly[6],
-            sevenHours: res.data.hourly[7],
-            eightHours: res.data.hourly[8],
-            nineHours: res.data.hourly[9],
-            tenHours: res.data.hourly[10],
-            elevenHours: res.data.hourly[11],
-            twelveHours: res.data.hourly[12]
-          })})
-          .catch((err) => console.log(err));
-  }, [])
+    const fetchWeather = async () => {
+        axios.get(`https://api.openweathermap.org/data/3.0/onecall?lat=53.91&lon=-1.74&appid=${config.key}`)
+        .then((res) => setOpenWeatherData(res.data))
+        .catch((err) => console.log(err));
+    };
+    fetchWeather();
+}, [])
+   
+  const [forecasts, setForecasts] = useState();
   
     dayjs.extend(localizedFormat)
     const day = dayjs().format('ll');
@@ -74,9 +44,9 @@ function App() {
   return (
     <div>
         {  currentDay && currentHour && currentMinute && <DateTimeBanner currentDay={currentDay} currentHour={currentHour} currentMinute={currentMinute}/>}
-        { weather && <LocationHeader weather={weather}/>}
-        { weather && <CurrentWeather weather={weather}/>}
-        { forecasts && <Forecasts forecasts={forecasts} currentHour={currentHour} currentMinute={currentMinute}/>}
+        {openWeatherData && <LocationHeader weather={openWeatherData}/>}
+        { openWeatherData && <CurrentWeather weather={openWeatherData}/>}
+        { openWeatherData && <Forecasts forecasts={openWeatherData}/>}
     </div>
   );
 }

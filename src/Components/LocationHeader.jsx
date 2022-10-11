@@ -9,7 +9,7 @@ import ClearBlueSky from '../css/images/ClearBlueSky.jpg';
 
 function LocationHeader({ weather }) {
     
-    let num = weather.id;
+    let num = weather.current.weather[0]['id'];
     let id = num.toString();
     let backgroundImage;
 

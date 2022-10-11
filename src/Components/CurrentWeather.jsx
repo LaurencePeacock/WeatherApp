@@ -7,13 +7,13 @@ function CurrentWeather({ weather }) {
     return (
         <div className='current-weather-container'>
             <div className="current-weather-icon-temp-wind">
-                <div><img className="current-weather-icon" src={`https://openweathermap.org/img/wn/${weather.icon}@2x.png`}/></div>
+                <div><img className="current-weather-icon" src={`https://openweathermap.org/img/wn/${weather.current.weather[0].icon}@2x.png`}/></div>
                 <div className="current-weather-temp-wind">
-                    <div><i className='wi wi-thermometer'></i> {weather.feels_like}<i className='wi wi-celsius'></i></div>
-                    <div> <i className='wi wi-strong-wind'></i> {weather.wind_speed} <span className='mph'>mph</span></div>
+                    <div><i className='wi wi-thermometer'></i> {Math.round((weather.current.feels_like - 273.15))}<i className='wi wi-celsius'></i></div>
+                    <div> <i className='wi wi-strong-wind'></i> {Math.round((weather.current.wind_speed*2.237))} <span className='mph'>mph</span></div>
                 </div>
             </div>
-            <div className='current-weather-description'>{weather.description}</div>
+            <div className='current-weather-description'>{weather.current.weather[0].description}</div>
         </div>
     )
 }
