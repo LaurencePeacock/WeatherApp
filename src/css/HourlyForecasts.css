@@ -10,6 +10,9 @@
 .hourly-forecast:first-child{
     border-left: 1px solid rgb(231, 231, 231);
 }
+.forecast-day{
+    margin-bottom: 0.5em;
+}
 .forecast-time{
     font-size: 1.2em;
     color:rgb(99, 99, 99)
@@ -20,7 +23,16 @@
 }
 .hour-forecast-temp, .hour-forecast-wind{
     font-size: 1.3em;
+    margin-bottom: 0.25em;
+}
+.hour-forecast-pop{
+    font-size: 1.1em;
+    margin-top: 0.5em;
+    
 }
 .mph{
     font-size: .5em;
+}
+.wi-humidity{
+    margin-left: 0.2em;
 }
