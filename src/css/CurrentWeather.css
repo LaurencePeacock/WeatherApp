@@ -30,3 +30,11 @@
 .mph{
     font-size: 0.7em;
 }
+.test-div::before{
+    content: url('C:\Users\Laurence\Programming\react_practice_apps\weather_app_v3.2\weather-icons-master\weather-icons-master\svg\wi-cloudy-windy.svg');
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    
+    
+}

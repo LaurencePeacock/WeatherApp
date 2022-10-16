@@ -18,9 +18,28 @@
     max-width: 4em;
     margin: 0 auto;
 }
-.hour-forecast-temp, .hour-forecast-wind{
+.hour-forecast-temp, .hour-forecast-wind, .hour-forecast-pop{
     font-size: 1.3em;
+    margin-bottom: 0.5em;
 }
 .mph{
     font-size: .5em;
 }
+
+.hour-forecast-pop{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+}
+.pop-icon::before{
+    content: '';
+    background-image: url('C:\Users\Laurence\Programming\react_practice_apps\weather_app_v3.2\weather-icons-master\weather-icons-master\svg\wi-humidity.svg');
+    display: inline-block;
+    width: 1.7em;
+    height:1.7em;
+ 
+
+}
+
+
