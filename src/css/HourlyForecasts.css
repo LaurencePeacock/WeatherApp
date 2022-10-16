@@ -1,0 +1,45 @@
+.hourly-forecast{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2em;
+    min-width: 6rem;
+    border-right: 1px solid rgb(231, 231, 231);
+    margin: 2em 0;
+}
+.hourly-forecast:first-child{
+    border-left: 1px solid rgb(231, 231, 231);
+}
+.forecast-time{
+    font-size: 1.2em;
+    color:rgb(99, 99, 99)
+}
+.hour-forecast-weather-icon{
+    max-width: 4em;
+    margin: 0 auto;
+}
+.hour-forecast-temp, .hour-forecast-wind, .hour-forecast-pop{
+    font-size: 1.3em;
+    margin-bottom: 0.5em;
+}
+.mph{
+    font-size: .5em;
+}
+
+.hour-forecast-pop{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+}
+.pop-icon::before{
+    content: '';
+    background-image: url('C:\Users\Laurence\Programming\react_practice_apps\weather_app_v3.2\weather-icons-master\weather-icons-master\svg\wi-humidity.svg');
+    display: inline-block;
+    width: 1.7em;
+    height:1.7em;
+ 
+
+}
+
+
