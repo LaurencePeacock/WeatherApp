@@ -3,9 +3,9 @@
     flex-direction: column;
     align-items: center;
     padding-top: 2em;
-    min-width: 6rem;
+    min-width: 4rem;
     border-right: 1px solid rgb(231, 231, 231);
-    margin: 2em 0;
+    margin: 0em 0;
 }
 .hourly-forecast:first-child{
     border-left: 1px solid rgb(231, 231, 231);
