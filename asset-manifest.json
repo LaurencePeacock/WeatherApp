@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/WeatherApp/static/css/main.fc49b064.css",
-    "main.js": "/WeatherApp/static/js/main.69259014.js",
+    "main.css": "/WeatherApp/static/css/main.ad04d2b5.css",
+    "main.js": "/WeatherApp/static/js/main.5f6d0e3e.js",
     "static/js/787.dc255a1d.chunk.js": "/WeatherApp/static/js/787.dc255a1d.chunk.js",
     "static/media/LightSnow.jpg": "/WeatherApp/static/media/LightSnow.83254139c8705d74f89d.jpg",
     "static/media/Misty2.jpg": "/WeatherApp/static/media/Misty2.9ff6821f45b92f3607be.jpg",
@@ -14,13 +14,15 @@
     "static/media/weathericons-regular-webfont.ttf": "/WeatherApp/static/media/weathericons-regular-webfont.0942d1e1c447d6ce3ffc.ttf",
     "static/media/weathericons-regular-webfont.woff": "/WeatherApp/static/media/weathericons-regular-webfont.371511ddba5fdac0538c.woff",
     "static/media/weathericons-regular-webfont.woff2": "/WeatherApp/static/media/weathericons-regular-webfont.e218aee6928fe3da9ed6.woff2",
+    "static/media/wi-humidity.svg": "/WeatherApp/static/media/wi-humidity.2cbfd748ce9458ddba90.svg",
+    "static/media/wi-cloudy-windy.svg": "/WeatherApp/static/media/wi-cloudy-windy.f823eea6c5fd00e68283.svg",
     "index.html": "/WeatherApp/index.html",
-    "main.fc49b064.css.map": "/WeatherApp/static/css/main.fc49b064.css.map",
-    "main.69259014.js.map": "/WeatherApp/static/js/main.69259014.js.map",
+    "main.ad04d2b5.css.map": "/WeatherApp/static/css/main.ad04d2b5.css.map",
+    "main.5f6d0e3e.js.map": "/WeatherApp/static/js/main.5f6d0e3e.js.map",
     "787.dc255a1d.chunk.js.map": "/WeatherApp/static/js/787.dc255a1d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fc49b064.css",
-    "static/js/main.69259014.js"
+    "static/css/main.ad04d2b5.css",
+    "static/js/main.5f6d0e3e.js"
   ]
 }
